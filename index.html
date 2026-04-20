@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>TaskFlow</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+</head>
+<body>
+
+<header>
+  <div class="logo">Task<span>Flow</span></div>
+  <div class="stats">
+    <div class="stat-active">Active: <b id="stat-active">0</b></div>
+    <div class="stat-done">Done: <b id="stat-done">0</b></div>
+    <div class="stat-overdue">Overdue: <b id="stat-overdue">0</b></div>
+  </div>
+</header>
+
+<main>
+  <!-- Add Task Form -->
+  <div class="form-card">
+    <div class="field">
+      <label>Task Name</label>
+      <input type="text" id="inp-title" placeholder="e.g. Design homepage…" maxlength="80" />
+    </div>
+    <div class="field" style="max-width:180px">
+      <label>Deadline</label>
+      <input type="date" id="inp-deadline" />
+    </div>
+    <button class="btn-add" id="btn-add">+ Add Task</button>
+  </div>
+
+  <div class="section-head">Tasks</div>
+
+  <div id="task-container">
+    <!-- cards rendered here -->
+  </div>
+</main>
+
+<div id="toast"></div>
+
+<script src="index.js"></script>
+</body>
+</html>
